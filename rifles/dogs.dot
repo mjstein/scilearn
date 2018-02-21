@@ -1,12 +1,20 @@
 digraph Tree {
 node [shape=box] ;
-0 [label="Weight(kg) <= 90.0\ngini = 0.625\nsamples = 4\nvalue = [2, 1, 1]\nclass = Machine_gun"] ;
-1 [label="Weight(kg) <= 55.0\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 1]\nclass = Rifle"] ;
+0 [label="Magazine capacity(rounds) <= 11.0\ngini = 0.78\nsamples = 10\nvalue = [2, 2, 1, 3, 2]\nclass = Anti Tank"] ;
+1 [label="gini = 0.0\nsamples = 3\nvalue = [0, 0, 0, 3, 0]\nclass = Anti Tank"] ;
 0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
-2 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]\nclass = SMG"] ;
-1 -> 2 ;
-3 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]\nclass = Rifle"] ;
-1 -> 3 ;
-4 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]\nclass = Machine_gun"] ;
-0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+2 [label="Magazine capacity(rounds) <= 650.0\ngini = 0.7347\nsamples = 7\nvalue = [2, 2, 1, 0, 2]\nclass = Machine gun"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="Fire rate(rpm) <= 17.0\ngini = 0.64\nsamples = 5\nvalue = [0, 2, 1, 0, 2]\nclass = Rifle"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 2\nvalue = [0, 2, 0, 0, 0]\nclass = Rifle"] ;
+3 -> 4 ;
+5 [label="Magazine capacity(rounds) <= 162.0\ngini = 0.4444\nsamples = 3\nvalue = [0, 0, 1, 0, 2]\nclass = Pistol"] ;
+3 -> 5 ;
+6 [label="gini = 0.0\nsamples = 2\nvalue = [0, 0, 0, 0, 2]\nclass = Pistol"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1, 0, 0]\nclass = SMG"] ;
+5 -> 7 ;
+8 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0, 0, 0, 0]\nclass = Machine gun"] ;
+2 -> 8 ;
 }
