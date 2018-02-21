@@ -1,0 +1,12 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="Weight(kg) <= 90.0\ngini = 0.625\nsamples = 4\nvalue = [2, 1, 1]\nclass = Machine_gun"] ;
+1 [label="Weight(kg) <= 55.0\ngini = 0.5\nsamples = 2\nvalue = [0, 1, 1]\nclass = Rifle"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.0\nsamples = 1\nvalue = [0, 0, 1]\nclass = SMG"] ;
+1 -> 2 ;
+3 [label="gini = 0.0\nsamples = 1\nvalue = [0, 1, 0]\nclass = Rifle"] ;
+1 -> 3 ;
+4 [label="gini = 0.0\nsamples = 2\nvalue = [2, 0, 0]\nclass = Machine_gun"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
