@@ -24,7 +24,7 @@ classifier.fit(features, labels)
 
 gun=get_input()
 gun.print()
-i_am(classifier.predict(gun.get()))
+i_am(classifier.predict([gun.get()]))
 
 
 with open('dogs.dot', 'w') as dotfile:
